@@ -1,0 +1,36 @@
+{
+  "name": "tasty",
+  "version": "1.0.0",
+  "description": "parses strings to asts",
+  "main": "index.js",
+  "scripts": {
+    "prerepl": "test -z $(command -v coffee)\"\" && npm i -g coffee || true",
+    "repl": "coffee src/repl.coffee",
+    "prelint": "test -z $(command -v coffeelint)\"\" && npm i -g coffeelint || true",
+    "lint": "coffeelint -f .coffeelintrc src/*.coffee test/*.coffee || true",
+    "predocs": "test -z $(command -v codo)\"\" && npm i -g codo || true",
+    "docs": "codo src/*.coffee --readme readme.md - LICENSE || true",
+    "pretest": "test -z $(command -v mocha)\"\" && npm i -g mocha || true",
+    "test": "mocha --compilers coffee:coffee-script/register -r test/setup.coffee -R tap test/*.test.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/efitzpa1/tasty.git"
+  },
+  "keywords": [
+    "parser",
+    "ast",
+    "expression"
+  ],
+  "author": "tsukumo",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/efitzpa1/tasty/issues"
+  },
+  "homepage": "https://github.com/efitzpa1/tasty",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "coffee-script": "^1.9.2",
+    "mocha": "^2.2.4"
+  }
+}
