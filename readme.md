@@ -1,5 +1,6 @@
 
-# Tasty
+Tasty [![Build Status](https://travis-ci.org/efitzpa1/tasty.svg?branch=master)](https://travis-ci.org/efitzpa1/tasty)
+===
 
 Before anything else
 
