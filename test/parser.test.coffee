@@ -37,7 +37,7 @@ describe "parser", ->
             .to.not.throw Error
             it "accept nests", -> expect ->
                 parser "!!4"
-            .to.not.throw Error
+            .to.throw Error
 
         describe "literals", ->
             it "reject mismatched quotes", -> expect ->

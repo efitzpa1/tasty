@@ -9,7 +9,9 @@ repl.start
     eval: ( cmd, context, filename, callback) ->
         cmd = cmd.match(/\((.*)/)[1]
         try
-            result = e p cmd
+            result = p cmd
+            console.log result
+            result = e result
         catch error
             result = error
         callback null, result
